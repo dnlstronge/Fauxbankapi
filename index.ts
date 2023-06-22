@@ -3,13 +3,13 @@ import dotenv from "dotenv"
 
 dotenv.config()
 
-const app = express()
+const app: Express = express()
 const port = process.env.PORT
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
     res.send('Fake banking api server');
   });
 
 app.listen(port, () => {
-    console.log(`Listening on port ${port}`)
+    console.log(`Listening on  http://localhost:${port}`)
 })
